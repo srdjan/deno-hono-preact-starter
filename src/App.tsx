@@ -1,4 +1,4 @@
-import { h, Fragment } from 'preact'
+import { render, h, Fragment } from 'preact'
 import { useEffect, useState } from 'preact/hooks'
 
 import { Layout } from './components/Layout.tsx'
@@ -13,7 +13,7 @@ export default function App() {
     return (
         <>
             <Layout>
-                <h1>Yeah!!! My is Your World!!!</h1>
+                <h1>This is Your World!!!</h1>
                 <h2>{counter}</h2>
                 <div>
                     <button class="text-success" onClick={() => setCounter(counter - 1)}>-1</button>
