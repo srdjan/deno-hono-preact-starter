@@ -6,6 +6,6 @@ const app = new Hono()
 
 app.use('*', logger(), prettyJSON())
 app.use('/*', serveStatic({ root: './' }))
-app.notFound((ctx) => ctx.json({ message: 'Not Found', Ok: false }, 404))
+app.notFound((c) => c.json({ message: 'Not Found', Ok: false }, 404))
 
 serve(app.fetch)

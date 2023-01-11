@@ -1,6 +1,8 @@
 import { h, Fragment } from 'preact'
 import { useEffect, useState } from 'preact/hooks'
 
+import { Layout } from './components/Layout.tsx'
+
 export default function App() {
     const [counter, setCounter] = useState(0)
 
@@ -10,12 +12,17 @@ export default function App() {
 
     return (
         <>
-            <h1>Yeah!!! World!!!</h1>
-            <h2>{counter}</h2>
-            <div>
-                <button onClick={() => setCounter(counter - 1)}>-1</button>
-                <button onClick={() => setCounter(counter + 1)}>+1</button>
-            </div>
+            <Layout>
+                <h1>Yeah!!! My is Your World!!!</h1>
+                <h2>{counter}</h2>
+                <div>
+                    <button class="text-success" onClick={() => setCounter(counter - 1)}>-1</button>
+                    <button class="text-success" onClick={() => setCounter(counter + 1)}>+1</button>
+                </div>
+            </Layout>
         </>
     );
 }
+
+const app = h(App, null, null)
+render(app, document.getElementById('root'))
