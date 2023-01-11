@@ -1,4 +1,4 @@
-// import { h, Fragment } from 'preact'
+import { h, Fragment } from 'preact'
 import { useEffect, useState } from 'preact/hooks'
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
 
     return (
         <>
-            <h1>Yeah!!! YoYo ! World</h1>
+            <h1>Yeah!!! World!!!</h1>
             <h2>{counter}</h2>
             <div>
                 <button onClick={() => setCounter(counter - 1)}>-1</button>
