@@ -1,0 +1,16 @@
+{
+  "imports": {
+    "preact-render-to-string": "https://esm.sh/v102/*preact-render-to-string@5.2.6",
+    "preact-render-to-string/": "https://esm.sh/v102/*preact-render-to-string@5.2.6/",
+    "preact": "https://esm.sh/v102/preact@10.11.3",
+    "preact/": "https://esm.sh/v102/preact@10.11.3/"
+  },
+  "scopes": {
+    "preact-render-to-string": {
+      "pretty-format": "https://esm.sh/v102/pretty-format@3.8.0"
+    },
+    "preact-render-to-string/": {
+      "pretty-format": "https://esm.sh/v102/pretty-format@3.8.0"
+    }
+  }
+}

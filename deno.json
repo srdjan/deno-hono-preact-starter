@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "start": "deno run -A --watch=server.ts server.ts",
+    "build": "deno run -A esbuild.ts"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "https://esm.sh/preact",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment"
+  },
+  "importMap": "import_map.json"
+}
