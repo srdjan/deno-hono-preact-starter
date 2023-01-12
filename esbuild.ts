@@ -5,7 +5,7 @@ const importMapURL = new URL('./import_map.json', import.meta.url)
 await esbuild.build({
     plugins: [denoPlugin({ importMapURL: importMapURL })],
     entryPoints: ['./src/index.tsx'],
-    outdir: 'dist',
+    outdir: 'public',
     bundle: true,
     minify: true,
     format: 'esm',
