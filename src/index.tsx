@@ -1,6 +1,6 @@
 import { render, h, Fragment } from 'preact'
-import { Layout } from './src/components/Layout.tsx'
-import { Counter } from './src/components/Counter.tsx'
+import { Layout } from './components/Layout.tsx'
+import { Counter } from './components/Counter.tsx'
 
 function App() {
   return (
