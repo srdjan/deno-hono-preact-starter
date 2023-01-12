@@ -1,7 +1,7 @@
 import { render, h, Fragment } from 'preact'
 import { useEffect, useState } from 'preact/hooks'
 
-export function Counter() {
+function Counter() {
   const [counter, setCounter] = useState(0)
 
   useEffect(() => {
@@ -19,3 +19,5 @@ export function Counter() {
     </div>
   )
 }
+
+export default Counter

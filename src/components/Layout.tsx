@@ -1,6 +1,6 @@
 import { h, Fragment } from 'preact'
 
-export const Layout = (props) => (
+const Layout = (props) => (
   <div>
     <nav className="nav">
       <div className="nav-left">
@@ -10,7 +10,7 @@ export const Layout = (props) => (
         <h3 className="outline">-Deno-Hono-Preact- Starter</h3>
       </div>
       <div className="nav-right">
-        <span className="primary is-vertical-align">⊣˚∆˚⊢</span>
+        <span className="primary is-vertical-align"></span>
       </div>
     </nav>
 
@@ -21,3 +21,5 @@ export const Layout = (props) => (
     </div>
   </div>
 )
+
+export default Layout
