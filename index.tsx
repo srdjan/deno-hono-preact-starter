@@ -4,11 +4,9 @@ import { Counter } from './src/components/Counter.tsx'
 
 export default function App() {
   return (
-    <>
-      <Layout>
-        <Counter></Counter>
-      </Layout>
-    </>
+    <Layout>
+      <Counter></Counter>
+    </Layout>
   )
 }
 
