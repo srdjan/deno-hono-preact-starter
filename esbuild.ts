@@ -4,7 +4,7 @@ import { denoPlugin } from "https://deno.land/x/esbuild_deno_loader@0.6.0/mod.ts
 const importMapURL = new URL('./import_map.json', import.meta.url)
 await esbuild.build({
     plugins: [denoPlugin({ importMapURL: importMapURL })],
-    entryPoints: ['./src/App.tsx'],
+    entryPoints: ['./index.tsx'],
     outdir: 'dist',
     bundle: true,
     minify: true,

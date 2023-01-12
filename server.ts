@@ -5,7 +5,8 @@ import { serveStatic, logger, html, prettyJSON } from 'https://deno.land/x/hono@
 const app = new Hono()
 
 app.use('*', logger(), prettyJSON())
-app.use('/*', serveStatic({ root: './' }))
+app.use('*', serveStatic({ root: './' }))
+app.use('/favicon.ico', serveStatic({ path: './public/favicon.ico' }))
 app.notFound((c) => c.json({ message: 'Not Found', Ok: false }, 404))
 
 serve(app.fetch)
