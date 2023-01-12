@@ -1,7 +1,7 @@
 import { h, Fragment } from 'preact'
 
 export const Layout = (props) => (
-  <div className="container">
+  <div>
     <nav className="nav">
       <div className="nav-left">
         <a className="brand" href="#">シ</a>

@@ -1,13 +1,13 @@
-## Deno & Preact & Hono
+## __Deno-Hono-Preact__
 
 ## Getting Started
 
-Build for the browser (src/index.js)
+Build for the browser (dist/index.js)
 ```sh
-deno task esbuild
+deno task build
 ```
 
-Run server
+Run the server
 ```sh
 deno task start
 ```
