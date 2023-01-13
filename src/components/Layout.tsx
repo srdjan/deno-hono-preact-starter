@@ -1,24 +1,24 @@
 import { h, Fragment } from 'preact'
 
 const Layout = (props) => (
-  <div>
-    <nav className="nav">
-      <div className="nav-left">
-        <a className="brand" href="#">シ</a>
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="tabs">
+          <a class="active">Home</a>
+          <a>About</a>
+        </div>
       </div>
-      <div className="nav-center">
-        <h3 className="outline">-Deno-Hono-Preact- Starter</h3>
+      <div class="nav-center">
+        <h4 class="outline"> _Deno-Hono-Preact_</h4>
       </div>
-      <div className="nav-right">
-        <span className="primary is-vertical-align"></span>
+      <div class="nav-right is-vertical-align">
+        <a class="active">シ</a>
       </div>
     </nav>
-
     <br></br>
-
-    <div>
-      {props.children}
-    </div>
+    <br></br>
+    {props.children}
   </div>
 )
 
