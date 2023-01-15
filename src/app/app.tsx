@@ -2,6 +2,7 @@ import { render, h } from 'preact'
 import { Redirect, Switch, Route, Link, useRoute } from "wouter-preact";
 import Counter from './components/Counter.tsx'
 import About from './components/About.tsx'
+import Features from './components/Features.tsx'
 import NotFound from './components/NotFound.tsx'
 
 const ActiveLink = (props) => {
@@ -18,34 +19,30 @@ const ActiveLink = (props) => {
 
 function App() {
   return (
-    <div>
-      <Route path="~/" children={<Redirect to="/" />} />
+    <div class="container">
+      <nav class="nav tabs">
+        <ActiveLink href="/" class="text-primary">Home</ActiveLink>
+        <ActiveLink href="/features" class="text-primary">Features</ActiveLink>
+        <ActiveLink href="/about" class="text-primary">About</ActiveLink>
+        <span class="nav-right text-primary is-vertical-align"><strong>シ</strong></span>
+      </nav>
 
-      <div class="container">
-        <nav class="nav">
-          <div class="tabs">
-            <ActiveLink href="/" class="text-primary">Home</ActiveLink>
-            <ActiveLink href="/about" class="text-primary">About</ActiveLink>
-          </div>
-          <div class="nav-right">
-            <span class="text-primary is-vertical-align"><strong>シ</strong></span>
-          </div>
-        </nav>
-
-        <main>
-          <Switch>
-            <Route path="/">
-              <Counter></Counter>
-            </Route>
-            <Route path="/about">
-              <About></About>
-            </Route>
-            <Route path="/:anything*">
-              <NotFound></NotFound>
-            </Route>
-          </Switch>
-        </main>
-      </div>
+      <main>
+        <Switch>
+          <Route path="/">
+            <Counter></Counter>
+          </Route>
+          <Route path="/features">
+            <Features></Features>
+          </Route>
+          <Route path="/about">
+            <About></About>
+          </Route>
+          <Route path="/:anything*">
+            <NotFound></NotFound>
+          </Route>
+        </Switch>
+      </main>
     </div>
   );
 }
