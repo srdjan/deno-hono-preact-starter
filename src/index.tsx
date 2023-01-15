@@ -1,14 +1,51 @@
 import { render, h, Fragment } from 'preact'
-import Layout from './components/Layout.tsx'
+import { Redirect, Switch, Route, Router, Link, useRoute } from "wouter-preact";
 import Counter from './components/Counter.tsx'
+import About from './components/About.tsx'
+import NotFound from './components/NotFound.tsx'
 
-function App() {
+const ActiveLink = (props) => {
+  const [isActive] = useRoute(props.href);
+
   return (
-    <Layout>
-      <Counter></Counter>
-    </Layout>
+    <Link {...props}>
+      <a href="/" class={isActive ? "active" : ""}>
+        {props.children}
+      </a>
+    </Link>
   )
 }
 
-const app = h(App, null, null)
-render(app, document.getElementById('root'))
+function App() {
+  return (
+    <Router base="/app">
+      <Route path="~/" children={<Redirect to="/" />} />
+
+      <div class="container">
+        <nav class="nav">
+          <div class="tabs">
+            <ActiveLink href="/">Home</ActiveLink>
+            <ActiveLink href="/about">About</ActiveLink>
+            <ActiveLink href="/BadLink">About2</ActiveLink>
+          </div>
+        </nav>
+
+        <main>
+          <Switch>
+            <Route path="/">
+              <Counter></Counter>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/:anything*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+        </main>
+      </div>
+    </Router>
+  );
+}
+
+render(<App />, document.getElementById("root"));

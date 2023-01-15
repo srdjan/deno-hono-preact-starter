@@ -10,11 +10,15 @@ function Counter() {
 
   return (
     <div>
-      <h4>This is Deno-Hono-Preact World!!!</h4>
-      <h4>{counter}</h4>
-      <div>
-        <button className="text-success" onClick={() => setCounter(counter - 1)}>-1</button>
-        <button className="text-success" onClick={() => setCounter(counter + 1)}>+1</button>
+      <br></br>
+      <p class="text-primary">This is Deno-Hono-Preact World!!!</p>
+      <br></br>
+      <div class="row">
+        <div class="col text-primary"> Count: {counter}</div>
+      </div>
+      <div class="row">
+        <a class="button primary" onClick={() => setCounter(counter - 1)}>-1</a>
+        <a class="button primary"onClick={() => setCounter(counter + 1)}>+1</a>
       </div>
     </div>
   )
