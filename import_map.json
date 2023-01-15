@@ -1,13 +1,13 @@
 {
   "imports": {
     "serve": "https://deno.land/std@0.146.0/http/server.ts",
-    "hono": "https://deno.land/x/hono@v2.7.2/mod.ts",
-    "middleware": "https://deno.land/x/hono@v2.7.2/middleware.ts",
+    "hono": "https://deno.land/x/hono@v3.0.0-rc.5/mod.ts",
+    "middleware": "https://deno.land/x/hono@v3.0.0-rc.5/middleware.ts",
     "preact-render-to-string": "https://esm.sh/v102/*preact-render-to-string@5.2.6",
     "preact-render-to-string/": "https://esm.sh/v102/*preact-render-to-string@5.2.6/",
     "preact": "https://esm.sh/v102/preact@10.11.3",
     "preact/": "https://esm.sh/v102/preact@10.11.3/",
-    "wouter-preact": "https://esm.sh/wouter-preact@2.9.0"
+    "wouter-preact": "https://esm.sh/wouter-preact@2.10.0-alpha.1"
 
   },
   "scopes": {
