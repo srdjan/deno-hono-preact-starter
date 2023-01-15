@@ -6,7 +6,6 @@ import { api } from './src/api/api.ts'
 const app = new Hono()
 
 app.use('*', logger(), prettyJSON())
-app.all('/favicon.ico', serveStatic({ path: './public/favicon.ico' }))
 app.use('*', serveStatic({ root: './public' }))
 app.route('/api', api)
 app.onError((err, c) => {
