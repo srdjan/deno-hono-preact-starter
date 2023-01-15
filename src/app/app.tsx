@@ -1,4 +1,4 @@
-import { render, h, Fragment } from 'preact'
+import { render, h } from 'preact'
 import { Redirect, Switch, Route, Router, Link, useRoute } from "wouter-preact";
 import Counter from './components/Counter.tsx'
 import About from './components/About.tsx'
@@ -26,7 +26,9 @@ function App() {
           <div class="tabs">
             <ActiveLink href="/">Home</ActiveLink>
             <ActiveLink href="/about">About</ActiveLink>
-            <ActiveLink href="/BadLink">About2</ActiveLink>
+          </div>
+          <div class="nav-right">
+            <span class="primary is-vertical-align"><strong>シ</strong></span>
           </div>
         </nav>
 

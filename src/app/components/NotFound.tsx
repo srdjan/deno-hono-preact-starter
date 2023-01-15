@@ -4,7 +4,7 @@ function NotFound() {
   return (
     <div>
       <br></br>
-      <p class="text-primary"><b>404:</b> Sorry, this page isn't ready yet!</p>
+      <p class="text-primary">Sorry, this page isn't ready yet!</p>
     </div>
   )
 }
