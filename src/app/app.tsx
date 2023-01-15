@@ -1,5 +1,5 @@
 import { render, h } from 'preact'
-import { Redirect, Switch, Route, Router, Link, useRoute } from "wouter-preact";
+import { Redirect, Switch, Route, Link, useRoute } from "wouter-preact";
 import Counter from './components/Counter.tsx'
 import About from './components/About.tsx'
 import NotFound from './components/NotFound.tsx'
@@ -18,17 +18,17 @@ const ActiveLink = (props) => {
 
 function App() {
   return (
-    <Router base="/app">
+    <div>
       <Route path="~/" children={<Redirect to="/" />} />
 
       <div class="container">
         <nav class="nav">
           <div class="tabs">
-            <ActiveLink href="/">Home</ActiveLink>
-            <ActiveLink href="/about">About</ActiveLink>
+            <ActiveLink href="/" class="text-primary">Home</ActiveLink>
+            <ActiveLink href="/about" class="text-primary">About</ActiveLink>
           </div>
           <div class="nav-right">
-            <span class="primary is-vertical-align"><strong>シ</strong></span>
+            <span class="text-primary is-vertical-align"><strong>シ</strong></span>
           </div>
         </nav>
 
@@ -46,7 +46,7 @@ function App() {
           </Switch>
         </main>
       </div>
-    </Router>
+    </div>
   );
 }
 
