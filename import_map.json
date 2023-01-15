@@ -1,5 +1,8 @@
 {
   "imports": {
+    "serve": "https://deno.land/std@0.146.0/http/server.ts",
+    "hono": "https://deno.land/x/hono@v2.7.2/mod.ts",
+    "middleware": "https://deno.land/x/hono@v2.7.2/middleware.ts",
     "preact-render-to-string": "https://esm.sh/v102/*preact-render-to-string@5.2.6",
     "preact-render-to-string/": "https://esm.sh/v102/*preact-render-to-string@5.2.6/",
     "preact": "https://esm.sh/v102/preact@10.11.3",

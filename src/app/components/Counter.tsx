@@ -1,4 +1,4 @@
-import { render, h, Fragment } from 'preact'
+import { h } from 'preact'
 import { useEffect, useState } from 'preact/hooks'
 
 function Counter() {
