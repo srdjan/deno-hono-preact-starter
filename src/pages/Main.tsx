@@ -1,11 +1,11 @@
 import { render, h } from 'preact'
-import { Redirect, Switch, Route, Link, useRoute } from "wouter-preact";
 import Counter from '../components/Counter.tsx'
 import About from './About.tsx'
 import Features from './Features.tsx'
+import { Redirect, Switch, Route, Link, useRoute } from "wouter-preact"
 
 const ActiveLink = (props) => {
-  const [isActive] = useRoute(props.href);
+  const [isActive] = useRoute(props.href)
 
   return (
     <Link {...props}>
@@ -42,7 +42,7 @@ function App() {
         </Switch>
       </main>
     </div>
-  );
+  )
 }
 
-render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById("root"))
